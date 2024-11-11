@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <div class="text-center">
+    <h2 class="display-4 mb-4">Palindrome Finder</h2>
+
+    <div class="input-group mb-3">
+      <input
+        [(ngModel)]="inputText"
+        class="form-control"
+        placeholder="Enter text"
+        aria-label="Enter text"
+        aria-describedby="button-find-palindromes"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-primary"
+          (click)="findPalindromes()"
+          id="button-find-palindromes"
+        >
+          Find Palindromes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="results.length > 0" class="mt-4">
+    <h3 class="text-center mb-4">Top 3 Longest Palindromes</h3>
+    <ul class="list-group">
+      <li *ngFor="let result of results" class="list-group-item shadow-sm mb-2">
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>Text:</strong> {{ result.text }}
+          </div>
+          <div>
+            <strong>Index:</strong> {{ result.index }}
+          </div>
+          <div>
+            <strong>Length:</strong> {{ result.length }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="results.length === 0 && inputText.length > 0" class="mt-4 text-center">
+    <div class="alert alert-warning" role="alert">
+      No palindromes found.
+    </div>
+  </div>
+</div>

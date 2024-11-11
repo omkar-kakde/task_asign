@@ -1,0 +1,39 @@
+/* Customize the overall layout */
+.container {
+  max-width: 600px;
+}
+
+/* Add margin to the input field and button */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Style the palindrome result list */
+.list-group-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* Hover effect for result list items */
+.list-group-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Style the headings */
+h2 {
+  font-family: 'Arial', sans-serif;
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Adjust alert box for no palindrome results */
+.alert-warning {
+  font-size: 16px;
+  font-weight: 500;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
